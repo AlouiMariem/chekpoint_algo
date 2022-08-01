@@ -1,0 +1,24 @@
+ALGORITHM chekpoint
+VAR
+    sent:STRING;
+    nc,nv,nw:INTEGER;
+    c:CHAR;
+BEGIN
+    nc:=0;
+    nv:=0;
+    nw:=1;
+    Read(sent)
+    WHILE (c<>".") DO
+        nc:=nc+1;
+        IF (c= in ["a","e","i","u","o","y","A","E","I","U","O","y"]) THEN
+            nv:=nv+1;
+        END_IF
+        IF (c=" ") THEN
+            nw:=nw+1;
+        END_IF
+    END_WHILE
+    Write(nc)
+    Write(nv)
+    Write(nw)
+
+END
